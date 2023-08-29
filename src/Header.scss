@@ -28,8 +28,10 @@
     &__icon{
         position:absolute;
         left: 5px;
+        bottom: 0.25px;
         top:50%;
         transform: translateY(-50%);
+        font-size: 1.5rem;
     }
     &__input{
         width: 100%;
