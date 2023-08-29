@@ -1,16 +1,15 @@
-import logo from "BanaKim.jpg"
-import './App.css';
+
+import './App.scss';
+
 
 function App() {
   return (
-    <div className="App">
-    
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          อยากเรียน <code>React</code> ไหม
-        </p>
-        <a className="App-link"></a>
-      
+    <div className="todo">
+
+    <div className="todo__header">Header</div>
+    <div className="todo__sidebar">SideBar</div>
+    <div className="todo__content">TodoContent</div>
+
     </div>
   );
 }
