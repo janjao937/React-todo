@@ -1,7 +1,8 @@
 
 import './App.scss';
 
-import Header from "./Header";
+import Header from "./Component/Header";
+
 
 function App() {
   return (
