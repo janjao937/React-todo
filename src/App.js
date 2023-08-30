@@ -6,6 +6,7 @@ import List from './Component/List';
 import TodoHeader from "./Component/TodoComponent/TodoHeader";
 import TodoCreate from "./Component/TodoComponent/TodoCreate";
 import TodoList from "./Component/TodoComponent/TodoList";
+import ListAccordian from './Component/AccordianList';
 
 
 function App() {
@@ -31,25 +32,14 @@ function App() {
     <div className="todo__sidebar"> 
         <aside className='sidebar'>
           <section className="sidebar__category">
-          <List data={generalList}/>
+
+          <ListAccordian dataList={generalList}/>
+
           </section>
 
           <section className='sidebar__category'>
-            <div className='accordion'>
-              {/* Toggle */}
-              <div className='accordion__toggle'>
-                <li className='accordion__item'>
-                  <FaChevronDown className='accordion__item__icon  accordion__item__active' />
-                  <p className="accordion__item__text">Projects</p>
-                </li>
-              </div>
-              {/* Lists */}
-              <ul className='list'>
-                
-              <List data={projectList}/>
-              
-              </ul>
-            </div>
+          <ListAccordian dataList={projectList} accodian ="Project"/>
+
           </section>
         </aside>
     </div>
@@ -66,6 +56,3 @@ function App() {
 }
 
 export default App;
-
-
-//challe
