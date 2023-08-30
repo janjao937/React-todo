@@ -2,9 +2,10 @@
 import './App.scss';
 import {FaInbox,FaCalendar,FaChevronDown}  from "react-icons/fa";
 import Header from "./Component/Header";
-import ListItem from './Component/ListItem';
 import List from './Component/List';
-
+import TodoHeader from "./Component/TodoComponent/TodoHeader";
+import TodoCreate from "./Component/TodoComponent/TodoCreate";
+import TodoList from "./Component/TodoComponent/TodoList";
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
               <div className='accordion__toggle'>
                 <li className='accordion__item'>
                   <FaChevronDown className='accordion__item__icon  accordion__item__active' />
-                  <p className='accordion__item__text'>Projects</p>
+                  <p className="accordion__item__text">Projects</p>
                 </li>
               </div>
               {/* Lists */}
@@ -52,10 +53,19 @@ function App() {
           </section>
         </aside>
     </div>
-    <div className="todo__content">TodoContent</div>
+    <div className="todo__content">
+      <div className="todo__container">
+        <TodoHeader/>
+        <TodoCreate/>
+        <TodoList/>
+      </div>
+    </div>
 
     </div>
   );
 }
 
 export default App;
+
+
+//challe
