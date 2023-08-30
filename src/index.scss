@@ -5,8 +5,8 @@
   $grey-light: #eaeaea;
   $grey-dark: #808080;
   $white: #fff;
-  $header-height: 44px;
-  $sidebar-width: 300px;
+  $header-height: 60px;
+  $sidebar-width: 375px;
 
 *,
 *::after,
@@ -29,4 +29,6 @@ body {
  
  
 }
-
+li{
+  list-style:none;
+}
