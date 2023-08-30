@@ -11,7 +11,7 @@ const Header=()=>{
       <div className="header__search">
         <SearchBar/>
       </div>
-
+      
     </div>
     );
 }

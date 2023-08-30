@@ -2,6 +2,7 @@
 import './App.scss';
 
 import Header from "./Component/Header";
+import Sidebar from "./Component/Sidebar";
 
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Header/>
     </div>
 
-    <div className="todo__sidebar"> SideBar </div>
+    <div className="todo__sidebar"> <Sidebar/> </div>
     <div className="todo__content">TodoContent</div>
 
     </div>

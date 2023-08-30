@@ -1,0 +1,57 @@
+@import "../index.scss";
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    &__container{
+        background-color: white;
+        width: 30rem;
+        height: 4rem;
+        // border: solid;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        margin-bottom: 8px;
+
+
+    }
+    &__container:hover{
+        background-color: gray;
+        
+    }
+    &__icon{
+        color: salmon;
+        font-weight: bold;
+        font-size: large;
+        padding-right: 10px;
+    }
+    &__dropDown{
+        display: flex;
+        justify-content: start;
+       
+        
+    }
+    &__dropDownContent{
+        display: none;
+        position: relative;
+        right: 7.7rem;
+        top: 5.5rem;
+        width: 30rem;
+        background-color: brown;
+        
+
+    }
+    &__dropDown:hover &__dropDownContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+    }
+    &__dropdown-item{
+
+    }
+    
+
+
+   
+}
