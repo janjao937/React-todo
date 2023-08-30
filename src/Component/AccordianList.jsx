@@ -5,6 +5,7 @@ const ListAccordian =(p)=>{
 
     if(p.accodian != null && p.accodian?.trim() != ""){
         return(
+               
             <div className='accordion'>
             
             <div className='accordion__toggle'>
@@ -17,7 +18,6 @@ const ListAccordian =(p)=>{
             <ul className='list'>
               
             <List data={p.dataList}/>
-            
             </ul>
           </div>
         )

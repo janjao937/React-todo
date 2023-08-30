@@ -13,14 +13,14 @@ function App() {
  
   const generalList = [
     {id:1,text:"Banana Doe",icon:<FaInbox/>,active:false},
-    {id:2,text:"Inbox Jane",icon:<FaInbox/>,active:false},
-    {id:3,text:"Doe Box",icon:<FaInbox/>,active:false},
+    {id:2,text:"Inbox Jane",icon:<FaCalendar/>,active:false},
+    {id:3,text:"Doe Box",icon:<FaInbox/>,active:true},
 
   ];
   const projectList = [
     {id:1,text:"Banana IB",icon:<FaInbox/>,active:true},
-    {id:2,text:"Inbox",icon:<FaInbox/>,active:false},
-    {id:3,text:"Inbox",icon:<FaInbox/>,active:false},
+    {id:2,text:"Inbox",icon:<FaCalendar/>,active:false},
+    {id:3,text:"Inbox",icon:<FaCalendar/>,active:true},
 
   ];
   return (
@@ -38,6 +38,7 @@ function App() {
           </section>
 
           <section className='sidebar__category'>
+
           <ListAccordian dataList={projectList} accodian ="Project"/>
 
           </section>
