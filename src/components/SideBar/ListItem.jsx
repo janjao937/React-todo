@@ -1,5 +1,4 @@
 import styles from './ListItem.module.scss';
-import { FaInbox } from 'react-icons/fa';
 
 /*
 props = {
