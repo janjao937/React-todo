@@ -61,7 +61,7 @@ function TodoForm(p) {
         {stateIsError?<p className={styles.todo__error}>{p.title!=null?p.title:"Title is Required"}</p>:""}
 
         <div className={styles.todo__form__buttons}>
-          <Button type="button" text ="Cancel" OnClick = {handleCancle} active={true}/>
+          <Button type="button" text ="Cancel" OnClick = {handleCancle} active={false}/>
           <Button type ="submit" text ={p.textSubmit} />
         </div>
       </div>
