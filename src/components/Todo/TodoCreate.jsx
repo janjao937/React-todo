@@ -16,6 +16,8 @@ import { useState } from 'react';
 -[state,setState]=useState(initialValue)
 -state = state
 -setState = FN ในการ change stateValue
+-เมื่อมีการเปลี่ยน State จะเป็นการ Re-render
+-Re-Render คือ Render ใหม่ทั้งหน้า
 */
 
 function TodoCreate() {
