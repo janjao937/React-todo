@@ -13,7 +13,7 @@ function TodoLists() {
  
   }
 
-  return editState?<TodoForm title="Banana BOB" textSubmit ="Edit Banana Joe"/> :(
+  return editState?<TodoForm setIsOpenForm={setEditState}  textSubmit ="Edit Banana Joe"/> :(
     <ul className={styles.todo__lists}>
       <li className={styles.todo}>
         <div className={`${styles.todo__checkbox} ${styles.todo__checkbox__done}`}>

@@ -26,13 +26,12 @@ function TodoCreate() {
   
   const handleClick =()=>{
     setIsOpenForm(!isOpenForm);
-    console.log("Banana"+isOpenForm);
   }
   return (
  
     <>  
     {
-      isOpenForm?<TodoForm title="Hello Banana Error" textSubmit = "Add Banana Joe"/>
+      isOpenForm?<TodoForm setIsOpenForm ={setIsOpenForm} textSubmit = "Add Banana Joe"/>
       :(
         <div onClick={handleClick} className={styles.todo__create}>
         <div className={styles.todo__create__button}>
