@@ -20,7 +20,7 @@ import { useState } from 'react';
 -Re-Render คือ Render ใหม่ทั้งหน้า
 */
 
-function TodoCreate() {
+function TodoCreate(p) {
   //Hook
   const [isOpenForm,setIsOpenForm] = useState(false);
   
@@ -31,7 +31,7 @@ function TodoCreate() {
  
     <>  
     {
-      isOpenForm?<TodoForm setIsOpenForm ={setIsOpenForm} textSubmit = "Add Banana Joe"/>
+      isOpenForm?<TodoForm  allTask={p.allTask} setAllTask = {p.setAllTask} setIsOpenForm ={setIsOpenForm} textSubmit = "Add Banana Joe"/>
       :(
         <div onClick={handleClick} className={styles.todo__create}>
         <div className={styles.todo__create__button}>

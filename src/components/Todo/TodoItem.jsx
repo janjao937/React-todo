@@ -8,7 +8,7 @@ import TodoForm from "./TodoForm"
 const TodoItem =(p)=>{
     const {task,done,date} = p;
     const [editState,setEditState] = useState(false)
-
+    console.log(p.id)
     const handleEdit =()=>{
       setEditState(!editState);
    

@@ -1,7 +1,7 @@
 import styles from './TodoForm.module.scss';
 import {Button} from "../Common/Button/Button";
 import { useState } from 'react';
-
+import {nanoid} from "nanoid"
 /*
 handle submit 2 type
 -type = submit : จะทำการ
@@ -27,23 +27,34 @@ function TodoForm(p) {
       setIsError(false);
     }
     SetTaskInput(e.target.value);
+    
   }
 
   const handleSubmit = (e)=>{
     e.preventDefault();
+    const newTask ={id:nanoid(),task:taskInput,status:false,due_date:"2023-04-30"}
+    
     /*
     FormValidatetion
     //Case1 => submit 
     //case2 => Error
+    
+    1-Request and save on database
+    2-Update state and re-render
     */
-  SetTaskInput("");
+    //add nanoid in key
+    
+   // p.setAllTask([newTask,...p.allTask]);
+    p.setAllTask((old)=>[newTask,...old])
+    SetTaskInput("");
+   
    if(taskInput.trim()=== "")
    {
     setIsError(true);
-    console.log("Error");
+    // console.log("Error");
     return;
    }
-    
+   p?.setIsOpenForm(false);
   }
   const handleCancle=()=>{
     //console.log("Cancle");
