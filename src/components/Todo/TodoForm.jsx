@@ -18,7 +18,7 @@ handle submit 2 type
 
 function TodoForm(p) {
   const [stateIsError,setIsError]  = useState(false);
-  const [taskInput,SetTaskInput] = useState("");
+  const [taskInput,SetTaskInput] = useState(p.oldTask?.task||"");
 
   const handleChangeInput=(e)=>{
     // console.log(e.target.value);
@@ -29,11 +29,15 @@ function TodoForm(p) {
     SetTaskInput(e.target.value);
     
   }
-
+//Add + Edit
   const handleSubmit = (e)=>{
     e.preventDefault();
-    const newTask ={id:nanoid(),task:taskInput,status:false,due_date:"2023-04-30"}
-    
+    if(taskInput.trim()=== "")
+    {
+      setIsError(true);
+      // console.log("Error");
+      return;
+    }
     /*
     FormValidatetion
     //Case1 => submit 
@@ -42,19 +46,20 @@ function TodoForm(p) {
     1-Request and save on database
     2-Update state and re-render
     */
-    //add nanoid in key
-    
-   // p.setAllTask([newTask,...p.allTask]);
-    p.setAllTask((old)=>[newTask,...old])
-    SetTaskInput("");
+   //add nanoid in key
    
-   if(taskInput.trim()=== "")
-   {
-    setIsError(true);
-    // console.log("Error");
-    return;
-   }
-   p?.setIsOpenForm(false);
+   // p.setAllTask([newTask,...p.allTask]);
+  //  const newTask ={id:nanoid(),task:taskInput,status:false,due_date:"2023-04-30"}
+  //   p.setAllTask((old)=>[newTask,...old])
+    SetTaskInput("");
+    if(p.addTask){
+      p.addTask(taskInput);
+    }
+    else if(p.editTask&&p.oldTask){
+      p.editTask(p.oldTask.id,{task:taskInput})
+    }
+    
+    p.setIsOpenForm(false);
   }
   const handleCancle=()=>{
     //console.log("Cancle");
@@ -78,6 +83,6 @@ function TodoForm(p) {
       </div>
     </form>
   );
-}
+} 
 
 export default TodoForm;

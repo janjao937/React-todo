@@ -27,11 +27,11 @@ function TodoCreate(p) {
   const handleClick =()=>{
     setIsOpenForm(!isOpenForm);
   }
-  return (
+  return ( 
  
     <>  
     {
-      isOpenForm?<TodoForm  allTask={p.allTask} setAllTask = {p.setAllTask} setIsOpenForm ={setIsOpenForm} textSubmit = "Add Banana Joe"/>
+      isOpenForm?<TodoForm addTask = {p.addTask} setIsOpenForm ={setIsOpenForm} textSubmit = "Add Banana Joe"/>
       :(
         <div onClick={handleClick} className={styles.todo__create}>
         <div className={styles.todo__create__button}>
